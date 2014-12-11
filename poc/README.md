@@ -23,6 +23,9 @@ To run the 'mock' Medocity
 node simple-node-httpserver.js 45678
 ```
 
+Fetch loads of sample HL7 from 
+https://github.com/jasonmimick/healthshare-handson-demo/tree/master/hl7
+
 To send HL7 into HealthShare
 ```bash
 curl -v -X POST localhost:56788 --data-binary @xx01.hl7
