@@ -43,7 +43,7 @@ Method OnRequest(pRequest As Ens.Request, Output pResponse As Ens.Response) As %
 		set httpReq = ##class(EnsLib.HTTP.GenericMessage).%New(jstream,,jstream)
 		do httpReq.HTTPHeaders.SetAt("POST","HttpRequest")
 		do httpReq.HTTPHeaders.SetAt("200 OK","ResponseCode")
-		do httpReq.HTTPHeaders.SetAt("text/xml","Content-Type")
+		do httpReq.HTTPHeaders.SetAt("application/json","Content-Type")
 		do httpReq.HTTPHeaders.SetAt(sdaStream.Size,"Content-Length")
 		quit ..SendRequestAsync(..MedocityEndpoint,httpReq,0)
 	} else {

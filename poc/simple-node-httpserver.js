@@ -16,7 +16,7 @@ var server = http.createServer(function(request, response) {
             var postData= '';
             request.on('data', function (data) {
                 postData += data;
-				console.log("Partial body: " + postData);
+				//console.log("Partial body: " + postData);
             });
             request.on('end', function () {
 				console.log("Headers\n-------");
